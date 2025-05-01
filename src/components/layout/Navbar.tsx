@@ -99,18 +99,20 @@ const Navbar: React.FC = () => {
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick('#contact');
-            }}
-            className="btn btn-primary"
-          >
-            Get in Touch
-          </a>
-        </div>
+       <div className="hidden md:block">
+  <a
+    href="#contact"
+    onClick={(e) => {
+      e.preventDefault();
+      handleNavClick('#contact');
+      window.open('https://wa.me/+923263778850', '_blank');
+    }}
+    className="btn btn-primary"
+  >
+    Get in Touch
+  </a>
+</div>
+
 
         {/* Mobile Menu Button */}
         <button

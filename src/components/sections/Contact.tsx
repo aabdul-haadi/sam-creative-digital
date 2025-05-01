@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/+923263778850', '_blank');
+    window.open('https://wa.me/+923138372573', '_blank');
   };
 
   return (
