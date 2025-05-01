@@ -9,12 +9,12 @@ const projects = [
   },
   {
     id: 2,
-    image: 'https://media.istockphoto.com/id/891605360/photo/blank-browser-window-mock-up-with-fashion-web-store-template.jpg?s=2048x2048&w=is&k=20&c=ZZANAEa3wbCHkwlXJlP7lZ126-9rvjefcynM824yXeA=',
+    image: 'https://images.unsplash.com/photo-1737737351943-82e01f866e53?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     link: 'https://example.com/project2',
   },
   {
     id: 3,
-    image: 'https://plus.unsplash.com/premium_photo-1678565999332-1cde462f7b24?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: 'https://images.unsplash.com/photo-1597979732130-9d2ad18df38b?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     link: 'https://example.com/project3',
   },
 ];
