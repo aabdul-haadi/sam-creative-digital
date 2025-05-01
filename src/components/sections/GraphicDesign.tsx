@@ -63,15 +63,22 @@ const services: ServiceCard[] = [
     icon: Video,
     projects: [
       {
-        title: 'Product Showcase',
-        description: '3D product animation',
-        content: 'https://www.youtube.com/watch?v=sZIDQZNOVb8',
+  title: 'Website Promotion Video',
+  description: 'Showcasing features & enhancing user experience.',
+  content: 'https://www.youtube.com/watch?v=zT_hEpZBzs8',
+  type: 'video'
+},
+
+      {
+        title: 'App Promotion',
+        description: '3D App animation',
+        content: 'https://www.youtube.com/shorts/PQWQD5fMBkU',
         type: 'video'
       },
       {
-        title: 'Explainer Video',
-        description: '2D animated explainer',
-        content: 'https://www.youtube.com/watch?v=GJ7unPa6flw',
+        title: 'Aniamtion Video',
+        description: 'Marekting Agnecey Aniamtion Video',
+        content: 'https://www.youtube.com/shorts/npxUR4KrNsM',
         type: 'video'
       },
       {
@@ -80,12 +87,6 @@ const services: ServiceCard[] = [
         content: 'https://www.youtube.com/shorts/ZFwMcVMf-yY',
         type: 'video'
       }, 
-{
-  title: 'Website Promotion Video',
-  description: 'Showcasing features & enhancing user experience.',
-  content: 'https://www.youtube.com/watch?v=zT_hEpZBzs8',
-  type: 'video'
-}
 
 
     ],
