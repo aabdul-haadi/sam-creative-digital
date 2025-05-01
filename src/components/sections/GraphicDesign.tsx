@@ -58,7 +58,7 @@ interface ServiceCard {
 
 const services: ServiceCard[] = [
   {
-    title: '2D/3D Animation',
+    title: 'Motion Graphics 2D/3D Animation',
     description: 'Bringing ideas to life through stunning animations.',
     icon: Video,
     projects: [
@@ -75,16 +75,11 @@ const services: ServiceCard[] = [
         type: 'video'
       },
       {
-        title: 'Character Animation',
-        description: 'Custom Ads, Banner & Poster Animation Services',
-        content: 'https://www.youtube.com/watch?v=Ezx2Yh25d3c',
+        title: 'Product Animation',
+        description: '3D product animation framer motion',
+        content: 'https://www.youtube.com/shorts/ZFwMcVMf-yY',
         type: 'video'
-      }, {
-  title: 'AI Website Script Promo',
-  description: 'Showcasing AI website script in motion graphics.',
-  content: 'https://www.youtube.com/watch?v=XI2_lYj5FMU',
-  type: 'video'
-},
+      }, 
 {
   title: 'Website Promotion Video',
   description: 'Showcasing features & enhancing user experience.',

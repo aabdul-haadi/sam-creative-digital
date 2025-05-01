@@ -5,17 +5,17 @@ const projects = [
   {
     id: 1,
     image: 'https://images.unsplash.com/photo-1728044849277-9cb3cd94e729?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    link: 'https://example.com/project1',
+    link: 'https://honda-tcj.netlify.app/',
   },
   {
     id: 2,
     image: 'https://images.unsplash.com/photo-1737737351943-82e01f866e53?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    link: 'https://example.com/project2',
+    link: 'https://foodies-tcj.netlify.app/',
   },
   {
     id: 3,
     image: 'https://images.unsplash.com/photo-1597979732130-9d2ad18df38b?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    link: 'https://example.com/project3',
+    link: 'https://coders-coffee.netlify.app/',
   },
 ];
 
