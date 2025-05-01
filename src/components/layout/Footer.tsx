@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com/people/SamCreative/100064029940645/?rdid=Es8gcLQM4WROprwf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16bao9N87o%2F"
+                href="https://www.facebook.com/profile.php?id=61570940347368"
                 className="w-10 h-10 rounded-full bg-background-lighter flex items-center justify-center hover:bg-primary hover:text-background transition-all duration-300"
               >
                 <Facebook size={18} />

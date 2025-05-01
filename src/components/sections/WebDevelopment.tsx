@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code, ShoppingCart, Rocket, X, ExternalLink, Package } from 'lucide-react';
+import { Code, ShoppingCart, Rocket, X, ExternalLink, Package, Link } from 'lucide-react';
+
+
+import crm1 from "../../assets/crm/crm1.jpg";
+import crm2 from "../../assets/crm/crm2.png";
+import crm3 from "../../assets/crm/crm3.png";
+import crm4 from "../../assets/crm/crm4.png";
+import crm5 from "../../assets/crm/crm5.png";
+
 
 interface Project {
   title: string;
   description: string;
   image: string;
+  url?: string;
 }
 
 interface ServiceCard {
@@ -29,17 +38,20 @@ const services: ServiceCard[] = [
       {
         title: 'Luxury Fashion Store',
         description: 'Full-featured e-commerce platform with custom theme',
-        image: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        image: 'https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80',
+        url: 'https://www.chanel.com'
       },
       {
         title: 'Digital Magazine',
         description: 'Custom WordPress publishing platform',
-        image: 'https://images.pexels.com/photos/5632397/pexels-photo-5632397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        image: 'https://images.unsplash.com/photo-1504270997636-07ddfbd48945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
+        url: 'https://www.vogue.com'
       },
       {
         title: 'Artisan Marketplace',
         description: 'Multi-vendor e-commerce solution',
-        image: 'https://images.pexels.com/photos/5632386/pexels-photo-5632386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+        url: 'https://www.etsy.com'
       }
     ],
     packages: {
@@ -64,25 +76,35 @@ const services: ServiceCard[] = [
     }
   },
   {
-    title: 'SaaS Products',
-    description: 'Scalable, secure, and user-friendly SaaS solutions.',
-    icon: Code,
-    projects: [
-      {
-        title: 'Project Management Tool',
-        description: 'Full-stack SaaS application',
-        image: 'https://images.pexels.com/photos/8566472/pexels-photo-8566472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-      },
-      {
-        title: 'Analytics Dashboard',
-        description: 'Real-time data visualization platform',
-        image: 'https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-      },
-      {
-        title: 'HR Management System',
-        description: 'Enterprise HR solution',
-        image: 'https://images.pexels.com/photos/8566474/pexels-photo-8566474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-      }
+  title: 'SaaS Products',
+  description: 'Scalable, secure, and user-friendly SaaS solutions.',
+  icon: Code,
+  projects: [
+    {
+      title: 'Project Management Tool',
+      description: 'Full-stack SaaS application',
+      image: crm1
+    },
+    {
+      title: 'Analytics Dashboard',
+      description: 'Real-time data visualization platform',
+      image: crm2
+    },
+    {
+      title: 'HR Management System',
+      description: 'Enterprise HR solution',
+      image: crm3
+    },
+    {
+      title: 'Customer Relationship Management',
+      description: 'CRM platform for businesses',
+      image: crm4
+    },
+    {
+      title: 'Marketing Automation',
+      description: 'Automated marketing solutions',
+      image: crm5
+    }
     ],
     packages: {
       basic: [
@@ -111,20 +133,24 @@ const services: ServiceCard[] = [
     icon: Rocket,
     projects: [
       {
-        title: 'Creative Agency Website',
-        description: 'Fully animated React application',
-        image: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-      },
-      {
-        title: 'Product Launch Page',
-        description: 'Interactive product showcase',
-        image: 'https://images.pexels.com/photos/5632397/pexels-photo-5632397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-      },
-      {
-        title: 'Portfolio Platform',
-        description: 'Dynamic artist portfolio system',
-        image: 'https://images.pexels.com/photos/5632386/pexels-photo-5632386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-      }
+  title: 'Radial',
+  description: 'Real-time data visualization platform.',
+  image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+  url: 'https://www.radial.com/'
+},
+{
+  title: 'Framer',
+  description: 'Design and prototyping tool.',
+  image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
+  url: 'https://www.framer.com/'
+},
+{
+  title: 'Clever',
+  description: 'Software for managing student data.',
+  image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80',
+  url: 'https://www.clever.com/'
+}
+
     ],
     packages: {
       basic: [
@@ -187,22 +213,22 @@ const WebDevelopment: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-text-muted mb-6">{service.description}</p>
                 
-                              <div className="flex gap-2">
-                 <button
-                   onClick={() => setSelectedService(index)}
-                   className="flex items-center justify-center w-full px-3 py-1.5 text-sm border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-colors duration-200"
-                 >
-                   <ExternalLink size={16} className="mr-1" />
-                   View Work
-                 </button>
-                 <button
-                   onClick={() => setShowPackages(index)}
-                   className="flex items-center justify-center w-full px-3 py-1.5 text-sm border border-gray-300 text-gray-700 rounded-md hover:border-primary hover:text-primary transition-colors duration-200"
-                 >
-                   <Package size={16} className="mr-1" />
-                   View Packages
-                 </button>
-               </div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setSelectedService(index)}
+                    className="flex items-center justify-center w-full px-3 py-1.5 text-sm border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-colors duration-200"
+                  >
+                    <ExternalLink size={16} className="mr-1" />
+                    View Work
+                  </button>
+                  <button
+                    onClick={() => setShowPackages(index)}
+                    className="flex items-center justify-center w-full px-3 py-1.5 text-sm border border-gray-300 text-gray-700 rounded-md hover:border-primary hover:text-primary transition-colors duration-200"
+                  >
+                    <Package size={16} className="mr-1" />
+                    View Packages
+                  </button>
+                </div>
               </motion.div>
             );
           })}
@@ -245,8 +271,21 @@ const WebDevelopment: React.FC = () => {
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                      <h4 className="text-xl font-semibold mb-2">{project.title}</h4>
-                      <p className="text-text-muted">{project.description}</p>
+                      <div className="flex justify-between items-center mb-2">
+                        <h4 className="text-xl font-semibold text-white">{project.title}</h4>
+                        {project.url && (
+                          <a 
+                            href={project.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="p-2 bg-white bg-opacity-20 rounded-full hover:bg-opacity-30 transition-all duration-200"
+                            onClick={e => e.stopPropagation()}
+                          >
+                            <Link size={18} className="text-white" />
+                          </a>
+                        )}
+                      </div>
+                      <p className="text-white text-opacity-80">{project.description}</p>
                     </div>
                   </div>
                 ))}
