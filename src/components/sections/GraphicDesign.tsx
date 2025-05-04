@@ -124,10 +124,23 @@ const services: ServiceCard[] = [
       content: logo1,
       type: 'image'
     },
+     {
+      title: 'KU Trading - Brown',
+      description: 'Distinctive brown version for KU Trading.',
+      content: logo6,
+      type: 'image'
+    },
+    
     {
       title: 'Gear Zone',
       description: 'A modern, sleek logo for Gear Zone.',
       content: logo2,
+      type: 'image'
+    },
+     {
+      title: 'Gear Zone - Texture',
+      description: 'Textured variant for Gear Zone logo.',
+      content: logo7,
       type: 'image'
     },
     {
@@ -137,39 +150,9 @@ const services: ServiceCard[] = [
       type: 'image'
     },
     {
-      title: 'Global Enterprises',
-      description: 'Bold and modern design for Global Enterprises.',
-      content: logo4,
-      type: 'image'
-    },
-    {
-      title: 'Urhaus',
-      description: 'Elegant logo design for Urhaus.',
-      content: logo5,
-      type: 'image'
-    },
-    {
-      title: 'KU Trading - Brown',
-      description: 'Distinctive brown version for KU Trading.',
-      content: logo6,
-      type: 'image'
-    },
-    {
-      title: 'Gear Zone - Texture',
-      description: 'Textured variant for Gear Zone logo.',
-      content: logo7,
-      type: 'image'
-    },
-    {
       title: 'Company Y',
       description: 'A sophisticated and modern logo for Company Y.',
       content: logo8,
-      type: 'image'
-    },
-    {
-      title: 'AK Resources',
-      description: 'Professional design for AK Resources.',
-      content: logo9,
       type: 'image'
     },
     {
@@ -177,7 +160,29 @@ const services: ServiceCard[] = [
       description: 'A global, colorful design for branding.',
       content: logo10,
       type: 'image'
-    }
+    },
+   
+    {
+      title: 'Global Enterprises',
+      description: 'Bold and modern design for Global Enterprises.',
+      content: logo4,
+      type: 'image'
+    },
+    
+    {
+      title: 'Urhaus',
+      description: 'Elegant logo design for Urhaus.',
+      content: logo5,
+      type: 'image'
+    },
+   
+    {
+      title: 'AK Resources',
+      description: 'Professional design for AK Resources.',
+      content: logo9,
+      type: 'image'
+    },
+  
     ],
     packages: {
       basic: [
