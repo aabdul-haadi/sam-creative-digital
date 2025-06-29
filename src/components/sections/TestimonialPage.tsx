@@ -38,13 +38,7 @@ const testimonials = [
     quote: 'Our website traffic doubled thanks to their SEO strategy and redesign. Their commitment to quality and results is truly impressive.',
     rating: 5
   },
-  {
-    name: 'Zainab Hassan',
-    title: 'Owner, Karachi Cuisine',
-    image: 'https://images.pexels.com/photos/1181697/pexels-photo-1181697.jpeg',
-    quote: 'SAM CREATIVE helped us establish our restaurant\'s digital presence. Their understanding of local market needs is exceptional.',
-    rating: 5
-  },
+
   {
     name: 'Mark Lee',
     title: 'CTO, CodeWave',
