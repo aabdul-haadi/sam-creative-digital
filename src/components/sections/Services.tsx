@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { 
@@ -120,10 +120,29 @@ const Services: React.FC = () => {
     triggerOnce: true,
     threshold: 0.1
   });
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <section id="services" className="section bg-background-light">
-      <div className="container-custom">
+    <section id="services" className="section relative overflow-hidden min-h-screen">
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80)`,
+          opacity: 0.15, // Lowered opacity to 0.15
+          transform: `translateY(${scrollY * 0.2}px)` // Parallax effect
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-transparent"></div>
+      </div>
+      <div className="container-custom relative z-10">
         <motion.div
           ref={titleRef}
           initial={{ opacity: 0, y: 20 }}

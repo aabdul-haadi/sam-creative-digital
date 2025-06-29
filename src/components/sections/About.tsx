@@ -35,7 +35,7 @@ const About: React.FC = () => {
               <div className="relative z-10 overflow-hidden rounded-xl">
                 <img 
                   src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                  alt="Nexus Digital Agency Team" 
+                  alt="SAM CREATIVE Digital Agency Team" 
                   className="w-full h-auto rounded-xl hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -64,7 +64,7 @@ const About: React.FC = () => {
               We Create <span className="text-primary">Digital Solutions</span> For Your Business
             </h2>
             <p className="text-text-muted mb-8">
-              Nexus is a full-service digital agency founded in 2015. We're a team of strategists, designers, developers, and marketers passionate about creating exceptional digital experiences that drive real business results.
+              SAM CREATIVE is a full-service digital agency founded in 2015. We're a team of strategists, designers, developers, and marketers passionate about creating exceptional digital experiences that drive real business results.
             </p>
             
             <div className="mb-8">
@@ -165,7 +165,7 @@ const About: React.FC = () => {
                       Our Core Principles
                     </h4>
                     <p className="text-text-muted">
-                      At Nexus, we are guided by our commitment to excellence, integrity, innovation, and client success in everything we do.
+                      At SAM CREATIVE, we are guided by our commitment to excellence, integrity, innovation, and client success in everything we do.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-center">

@@ -95,21 +95,21 @@ const Stats: React.FC = () => {
     {
       id: 2,
       icon: <Briefcase size={32} className="text-primary" />,
-      value: 450,
+      value: 250,
       label: "Projects Completed",
       delay: 1
     },
     {
       id: 3,
       icon: <Award size={32} className="text-primary" />,
-      value: 25,
+      value: 10,
       label: "Awards Won",
       delay: 2
     },
     {
       id: 4,
       icon: <Clock size={32} className="text-primary" />,
-      value: 8,
+      value: 4,
       label: "Years Experience",
       delay: 3
     }
