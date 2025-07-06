@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { CheckCircle, Users, Trophy, Clock } from 'lucide-react';
 
+import missionImg from '/src/assets/img/mission.webp';
+import visionImg from '/src/assets/img/vision.webp';
+import valuesImg from '/src/assets/img/values.webp';
+
 const About = () => {
   const [activeTab, setActiveTab] = useState('mission');
 
   // Define local images for each tab
   const tabImages = {
-    mission: '/src/assets/img/mission.webp',
-    vision: '/src/assets/img/vision.webp',
-    values: '/src/assets/img/values.webp',
-  };
+  mission: missionImg,
+  vision: visionImg,
+  values: valuesImg,
+};
 
   return (
     <section id="about" className="section relative overflow-hidden">
