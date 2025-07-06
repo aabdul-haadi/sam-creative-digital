@@ -1,132 +1,33 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { CheckCircle, Users, Trophy, Clock } from 'lucide-react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Register GSAP ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
-
-const About: React.FC = () => {
+const About = () => {
   const [activeTab, setActiveTab] = useState('mission');
-  const sectionRef = useRef<HTMLElement>(null);
-  const imageContainerRef = useRef<HTMLDivElement>(null);
-  const tabContentRef = useRef<HTMLDivElement>(null);
 
   // Define local images for each tab
   const tabImages = {
     mission: '/src/assets/img/mission.webp',
-    vision: '/src/assets/img/vision.webp', // Note: User specified "vission.webp", assuming typo for "vision.webp"
+    vision: '/src/assets/img/vision.webp',
     values: '/src/assets/img/values.webp',
   };
 
-  useEffect(() => {
-    const tabs = ['mission', 'vision', 'values'];
-    const wrap = (index: number) => {
-      return ((index % tabs.length) + tabs.length) % tabs.length;
-    };
-
-    // Set up GSAP animations for tab and image switching
-    const animateTab = (newTab: string, direction: number) => {
-      const tl = gsap.timeline({
-        onComplete: () => setActiveTab(newTab),
-      });
-
-      // Animate tab content (fade out, slide in)
-      tl.to(tabContentRef.current, {
-        opacity: 0,
-        y: 20 * direction,
-        duration: 0.5,
-        ease: 'power2.out',
-      })
-        .set(tabContentRef.current, { opacity: 0, y: -20 * direction })
-        .to(tabContentRef.current, {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          ease: 'power2.out',
-        });
-
-      // Animate images (fade and scale)
-      const images = imageContainerRef.current?.querySelectorAll('.tab-image');
-      if (images) {
-        const currentImage = images[tabs.indexOf(activeTab)];
-        const nextImage = images[tabs.indexOf(newTab)];
-
-        tl.set(currentImage, { display: 'block' }) // Ensure current image is visible
-          .set(nextImage, { display: 'block' }) // Prepare next image
-          .fromTo(
-            currentImage,
-            { opacity: 1, scale: 1 },
-            { opacity: 0, scale: 1.1, duration: 0.5, ease: 'power2.in', onComplete: () => gsap.set(currentImage, { display: 'none' }) },
-            0
-          )
-          .fromTo(
-            nextImage,
-            { opacity: 0, scale: 1.1 },
-            { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out' },
-            0.5
-          );
-      }
-    };
-
-    // Set initial image visibility
-    const images = imageContainerRef.current?.querySelectorAll('.tab-image');
-    if (images) {
-      gsap.set(images, { opacity: 0, scale: 1.1, display: 'none' });
-      gsap.set(images[tabs.indexOf(activeTab)], { opacity: 1, scale: 1, display: 'block' });
-    }
-
-    // Set up ScrollTrigger for scroll-based tab switching
-    ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: 'top top',
-      end: '+=200%', // Scroll distance for all tabs
-      pin: true, // Pin section during scroll
-      scrub: true, // Smooth scroll-based updates
-      onUpdate: (self) => {
-        const progress = self.progress;
-        const tabIndex = Math.floor(progress * tabs.length);
-        const newTab = tabs[wrap(tabIndex)];
-        if (newTab !== activeTab) {
-          const direction = tabIndex > tabs.indexOf(activeTab) ? 1 : -1;
-          animateTab(newTab, direction);
-        }
-      },
-    });
-
-    // Clean up ScrollTrigger on unmount
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, [activeTab]);
-
   return (
-    <section id="about" className="section relative overflow-hidden" ref={sectionRef}>
+    <section id="about" className="section relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary opacity-5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-accent opacity-5 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
 
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative" ref={imageContainerRef}>
+          <div className="relative">
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary opacity-10 rounded-lg transform rotate-6"></div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent opacity-10 rounded-lg transform -rotate-6"></div>
 
             <div className="relative z-10 overflow-hidden rounded-xl h-[300px] lg:h-[400px] w-full">
               <img
-                src={tabImages.mission}
-                alt="Mission Image"
-                className="tab-image w-full h-full object-cover rounded-xl absolute top-0 left-0"
-              />
-              <img
-                src={tabImages.vision}
-                alt="Vision Image"
-                className="tab-image w-full h-full object-cover rounded-xl absolute top-0 left-0"
-              />
-              <img
-                src={tabImages.values}
-                alt="Values Image"
-                className="tab-image w-full h-full object-cover rounded-xl absolute top-0 left-0"
+                src={tabImages[activeTab]}
+                alt={`${activeTab.charAt(0).toUpperCase() + activeTab.slice(1)} Image`}
+                className="w-full h-full object-cover rounded-xl"
               />
             </div>
 
@@ -169,7 +70,7 @@ const About: React.FC = () => {
                 ))}
               </div>
 
-              <div className="min-h-[180px]" ref={tabContentRef}>
+              <div className="min-h-[180px]">
                 {activeTab === 'mission' && (
                   <div>
                     <h4 className="text-xl font-semibold mb-3 flex items-center">
